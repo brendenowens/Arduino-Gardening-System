@@ -6,3 +6,5 @@ There are a few custom made classes that come with the Arduino code so know wher
 The .ino file is the Arduino file that will have to be uploaded to the Arduino board.
 
 If you have any questions, comments, or words of abuse please let me know.
+
+EDIT: changed the servo code because the valve doesn't require 180 degrees to open. In my case it was just 100 degrees. Also made the servos start off in their default position, which is 0, in setup. 

@@ -61,6 +61,10 @@ void setup()
   area1.attach(3);
   area2.attach(4);
   area3.attach(5);
+  spiggot.write(0);
+  area1.write(0);
+  area2.write(0);
+  area3.write(0);
   
   /* The variable total will keep track of how many times it has been raining over the course of an hour.
    * If it has been raining for an hour then the system will be delayed for a whole day. */
@@ -91,19 +95,19 @@ void loop()
          if(sense.checkSoil(1))
          {
            dry=1;
-           spiggot_pos=180;
-           area2_pos=180
+           spiggot_pos=100;
+           area2_pos=100;
          }
          //check soil sensor 2
          if(sense.checkSoil(2))
          { 
            dry=2;
-           area2_pos=180;
+           area2_pos=100;
          }
          //check soil sensor 3
          if(sense.checkSoil(3)) {
            dry=3; 
-           area3_pos=180;
+           area3_pos=100;
          }
          
          if(dry == 1) {
